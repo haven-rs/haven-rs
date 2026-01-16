@@ -1,6 +1,6 @@
 MEMORY
 {
-    FLASH (rx) : ORIGIN = 0x0, LENGTH = 0x2000
+    ROM (rx) : ORIGIN = 0x0, LENGTH = 0x2000
     IRAM (rw)  : ORIGIN = 0x10000, LENGTH = 0x10000
 }
 
@@ -19,7 +19,7 @@ SECTIONS
         *(.text*)
     
         . = ALIGN(4);
-    } > FLASH =0xFFFFFFFF
+    } > ROM =0xFFFFFFFF
 
 
     .bss : {
