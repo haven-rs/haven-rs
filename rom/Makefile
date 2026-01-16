@@ -13,7 +13,7 @@ ROOT ?= ..
 BDIR ?= build
 
 CPPFLAGS += -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
-CFLAGS += -Wall -std=gnu99 -g -fno-if-conversion -fno-if-conversion2
+CFLAGS += -Wall -std=gnu99 -g -fno-if-conversion -fno-if-conversion2 -Wno-format -Wno-format-extra-args
 CFLAGS += -march=armv7-m -mcpu=cortex-m3 -mthumb -Os -mno-sched-prolog -mno-unaligned-access \
 		-ffreestanding
 CFLAGS += -I$(ROOT)/builtin-c -I$(ROOT)/chip/c
