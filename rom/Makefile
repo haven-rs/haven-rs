@@ -54,18 +54,20 @@ clean:
 $(BDIR):
 	$(Q)$(MKDIR) -p $@
 
+## format:
+## '[2-space padding][8-char word][2-space padding][extra info, e.g: filename]'
 $(BDIR)/%.o: %.c
-	@echo "  CC      $(notdir $<)"
+	@echo "  CC        $(notdir $<)"
 	$(Q)$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
 
 $(BDIR)/%.o: %.S
-	@echo "  AS      $(notdir $<)"
+	@echo "  AS        $(notdir $<)"
 	$(Q)$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
 
 $(BDIR)/bootrom.elf: $(SRCS)
-	@echo "  LD      $(notdir $@)"
+	@echo "  LD        $(notdir $@)"
 	$(Q)$(LD) $^ -o $@ $(LDFLAGS)
 
 $(BDIR)/bootrom.bin: $(BDIR)/bootrom.elf
-	@echo "  OBJCOPY $(notdir $@)"
+	@echo "  OBJCOPY   $(notdir $@)"
 	$(Q)$(OBJCOPY) -O binary $< $@
