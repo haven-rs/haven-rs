@@ -1,3 +1,6 @@
 [submodule "docs/ref/cr50"]
 	path = docs/ref/cr50
 	url = https://github.com/HavenOverflow/Cr50
+[submodule "rom"]
+	path = rom
+	url = https://github.com/haven-rs/rom
