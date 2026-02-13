@@ -1,10 +1,11 @@
 {
 // List of fuses and their expected values.
-"fuses": {
-        "FLASH_PERSO_PAGE_LOCK": 5,  // individualized
-        "FW_DEFINED_DATA_BLK0": 2,  // cros SKU
-        "FW_DEFINED_DATA_EXTRA_BLK6": 0  // escape hatch
-},
+// "fuses": {
+//         "FLASH_PERSO_PAGE_LOCK": 5,  // individualized
+//         "FW_DEFINED_DATA_BLK0": 2,  // cros SKU
+//         "FW_DEFINED_DATA_EXTRA_BLK6": 0  // escape hatch
+// },
+  "fuses": {},
   "board_id": 0,
   "board_id_mask": 0,
   "board_id_flags": 0,
@@ -38,9 +39,9 @@
   // cros_loader uses b1-dev key as key to verify RW with
   //"keyid": -1187158727,  // b1-dev key
   //"keyid": -2018034841,  // prod RW key used by the builder
-  "keyid": -764428053,     // loader-testkey.A.pem
+  "keyid": 1363614211,     // loader-testkey.A.pem
 
-  "p4cl": 177,  // P4 sync cl for XML we link against. 177 == 0xb1.
+  "p4cl": 0,  // P4 sync cl for XML we link against. 177 == 0xb1.
 
   // Make sure a value is there so that current time is not used, and make
   // sure the value is small so that any dev build with the same
